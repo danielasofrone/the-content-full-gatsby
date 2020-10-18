@@ -9,10 +9,10 @@ export const Wrapper = styled.div`
   margin-top: 70px;
   padding: 20px ;
   @media (min-width: 567px) {
-    padding: 50px;
+    padding: 20px 50px 10px 50px;
   }
   @media (min-width: 768px) {
-    padding: 70px;
+    padding: 50px 70px 20px 70px;
   }
 `;
 
@@ -22,14 +22,7 @@ export const EntryTitle = styled.div`
   text-align: center;
   font-weight: 600;
   margin-bottom: 30px;
-  cursor: pointer;
-  a {
-    color: rgb(65, 65, 65);
-    text-decoration: none;
-    &:hover {
-      color: #000;
-    }
-  }
+  color: rgb(65, 65, 65);
   @media (min-width: 768px) {
     font-size: 1.5rem;
     margin-bottom: 35px;
@@ -52,10 +45,26 @@ export const ImageContainer = styled.div`
 export const EntryText = styled.div`
   font-family: "Questrial", sans-serif;
   color: rgb(65, 65, 65);
-  font-size: 18px;
+  font-size: 1.125rem;
   text-align: left;
   margin: 20px 0;
   @media (min-width: 768px) {
     margin: 50px 0 30px 0;
   }
+`;
+
+export const ReadMoreLink = styled.div`
+  margin: 20px 0;
+  font-size: 1.125rem;
+  display: ${({ isHomePage }) => (isHomePage ? "block" : "none")};
+ a{
+  color: #4089ed;
+  display: ${({ isHomePage }) => (isHomePage ? "block" : "none")};
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+    transition: opacity 0.3s;
+  }
+ }
 `;

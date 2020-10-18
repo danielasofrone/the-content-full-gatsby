@@ -17,6 +17,7 @@ const AirplaneModel = ({node}) => {
     image={node.image.resize.src}
     description={node.description}
     slug={node.slug}
+    isHomePage
     />
   )
 }

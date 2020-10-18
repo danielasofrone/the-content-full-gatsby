@@ -3,10 +3,10 @@ import * as S from './contentEntry.styled'
 import PropTypes from "prop-types";
 import Link from 'gatsby-link'
 
-const ContentEntry = ({title, description, image, fullText, slug }) => (
+const ContentEntry = ({title, description, image, fullText, slug, isHomePage }) => (
   <S.Wrapper>
    <S.EntryTitle>
-   <Link to={`/airplaneModels/${slug}`}>{title}</Link>
+   {title}
    </S.EntryTitle>
    <S.ImageContainer>
      <img src={image} alt={title} />
@@ -15,6 +15,9 @@ const ContentEntry = ({title, description, image, fullText, slug }) => (
    <S.EntryText
    dangerouslySetInnerHTML={{ __html: fullText }}
    />
+   <S.ReadMoreLink isHomePage={isHomePage}>
+   <Link to={`/airplaneModels/${slug}`}> Read more 	&rarr; </Link>
+   </S.ReadMoreLink>
   </S.Wrapper>
 )
 
@@ -25,6 +28,7 @@ ContentEntry.propTypes = {
   image: PropTypes.string,
   fullText: PropTypes.string,
   slug: PropTypes.string,
+  isHomePage: PropTypes.bool,
 };
 
 export default ContentEntry
