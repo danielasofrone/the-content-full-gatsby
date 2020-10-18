@@ -5,10 +5,10 @@ export const Wrapper = styled.div`
   margin-top: 70px;
   padding: 30px 20px 20px 20px;
   @media (min-width: 576px) {
-    padding: 50px;
+    padding: 70px;
   }
   @media (min-width: 768px) {
-    padding: 70px 100px;
+    padding: 70px 200px;
   }
 `;
 
@@ -36,7 +36,6 @@ export const EntryTitle = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  max-height: 400px;
   background-color: grey;
   overflow: hidden;
   img {

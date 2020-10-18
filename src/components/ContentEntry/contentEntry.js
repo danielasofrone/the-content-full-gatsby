@@ -1,10 +1,13 @@
 import React from 'react'
 import * as S from './contentEntry.styled'
 import PropTypes from "prop-types";
+import Link from 'gatsby-link'
 
 const ContentEntry = ({title, description, image, fullText, slug }) => (
   <S.Wrapper>
-   <S.EntryTitle>{title}</S.EntryTitle>
+   <S.EntryTitle>
+   <Link to={slug}>{title}</Link>
+   </S.EntryTitle>
    <S.ImageContainer> 
      <img src={image} alt={title} />
      </S.ImageContainer>
@@ -14,7 +17,7 @@ const ContentEntry = ({title, description, image, fullText, slug }) => (
 )
 
 
-BlogPost.propTypes = {
+ContentEntry.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,

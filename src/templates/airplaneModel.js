@@ -8,6 +8,8 @@ const AirplaneModel = ( {data}) =>  {
     <div>
       <h1>{post.title}</h1>
       <p>{post.description}</p>
+      <p  dangerouslySetInnerHTML={{ __html: post.fullText.fullText }} />
+      <img src={post.image.fluid.src}/>
     </div>
   )
 }
@@ -26,6 +28,11 @@ query (
     description
     fullText {
       fullText
+    }
+    image {
+      fluid {
+        src
+      }
     }
   }
 }
