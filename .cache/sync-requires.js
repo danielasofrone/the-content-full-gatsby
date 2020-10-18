@@ -8,8 +8,6 @@ exports.components = {
   "component---cache-dev-404-page-js": hot(preferDefault(require("/Users/danielasofrone/Documents/TheContentFullGatsby/the-content-full-gatsby/.cache/dev-404-page.js"))),
   "component---src-pages-404-js": hot(preferDefault(require("/Users/danielasofrone/Documents/TheContentFullGatsby/the-content-full-gatsby/src/pages/404.js"))),
   "component---src-pages-index-js": hot(preferDefault(require("/Users/danielasofrone/Documents/TheContentFullGatsby/the-content-full-gatsby/src/pages/index.js"))),
-  "component---src-pages-page-2-js": hot(preferDefault(require("/Users/danielasofrone/Documents/TheContentFullGatsby/the-content-full-gatsby/src/pages/page-2.js"))),
-  "component---src-pages-using-typescript-tsx": hot(preferDefault(require("/Users/danielasofrone/Documents/TheContentFullGatsby/the-content-full-gatsby/src/pages/using-typescript.tsx"))),
   "component---src-templates-airplane-model-js": hot(preferDefault(require("/Users/danielasofrone/Documents/TheContentFullGatsby/the-content-full-gatsby/src/templates/airplaneModel.js")))
 }
 

@@ -8,11 +8,13 @@ const ContentEntry = ({title, description, image, fullText, slug }) => (
    <S.EntryTitle>
    <Link to={slug}>{title}</Link>
    </S.EntryTitle>
-   <S.ImageContainer> 
+   <S.ImageContainer>
      <img src={image} alt={title} />
      </S.ImageContainer>
    <S.EntryText>{description}</S.EntryText>
-   <S.EntryText>{fullText}</S.EntryText>
+   <S.EntryText
+   dangerouslySetInnerHTML={{ __html: fullText }}
+   />
   </S.Wrapper>
 )
 

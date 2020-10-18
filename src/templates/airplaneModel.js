@@ -1,15 +1,16 @@
 import React from 'react'
 import {graphql} from 'gatsby'
-
+import ContentEntry from '../components/ContentEntry/contentEntry'
 
 const AirplaneModel = ( {data}) =>  {
   const post = data.contentfulAirplaneModel
   return (
     <div>
-      <h1>{post.title}</h1>
-      <p>{post.description}</p>
-      <p  dangerouslySetInnerHTML={{ __html: post.fullText.fullText }} />
-      <img src={post.image.fluid.src}/>
+       <ContentEntry
+    title={post.title}
+    image={post.image.resize.src}
+    fullText={post.fullText.childMarkdownRemark.html}
+    />
     </div>
   )
 }
@@ -26,9 +27,16 @@ query (
     slug
     title
     description
-    fullText {
-      fullText
+    image {
+      resize(width: 900, height: 400) {
+        src
+      }
     }
+    fullText {
+      childMarkdownRemark {
+       html
+     }
+     }
     image {
       fluid {
         src

@@ -11,7 +11,7 @@ const AirplaneModel = ({node}) => {
       <Layout title={siteTitle}>
         <SEO title="Home" />
         <p>
-          No blog posts found. 
+          No blog posts found.
         </p>
       </Layout>
     )
@@ -27,7 +27,6 @@ const AirplaneModel = ({node}) => {
     slug={node.slug}
     />
     </>
-    
   )
 }
 
@@ -57,9 +56,6 @@ export const pageQuery = graphql
               resize(width: 900, height: 400) {
                 src
               }
-            }
-            fullText {
-              fullText
             }
           }
         }
