@@ -33,7 +33,7 @@ const AirplaneModel = ({node}) => {
 const IndexPage = ({data}) => (
   <ul>
     {data.allContentfulAirplaneModel.edges.map((edge) =>
-    <AirplaneModel node={edge.node} />
+    <AirplaneModel key ={edge.node.slug} node={edge.node} />
     )}
   </ul>
 )
