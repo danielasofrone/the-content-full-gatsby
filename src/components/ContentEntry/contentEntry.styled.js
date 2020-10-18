@@ -1,9 +1,19 @@
 import styled from "styled-components";
 
+export const PageWrapper = styled.div`
+  margin: 0 200px;
+`;
+
 export const Wrapper = styled.div`
   border: 1px solid rgba(244, 243, 242, 0.75);
   margin-top: 70px;
-  padding: 50px;
+  padding: 20px ;
+  @media (min-width: 567px) {
+    padding: 50px;
+  }
+  @media (min-width: 768px) {
+    padding: 70px;
+  }
 `;
 
 export const EntryTitle = styled.div`

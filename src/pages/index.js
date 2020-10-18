@@ -2,14 +2,13 @@ import React from "react"
 import ContentEntry from '../components/ContentEntry/contentEntry'
 import SEO from "../components/seo"
 import Layout from "../components/Layout/layout"
+import * as S from '../components/ContentEntry/contentEntry.styled'
 
 const AirplaneModel = ({node}) => {
 
   if (node.length === 0) {
     return (
-        <p>
-          No blog posts found.
-        </p>
+        <p>No blog posts found.</p>
     )
   }
   return (
@@ -23,14 +22,17 @@ const AirplaneModel = ({node}) => {
 }
 
 const IndexPage = ({data}) => (
-  <Layout title={'Airplane Models'}>
+ <>
+  <Layout title={'Airplane Models'} />
   <SEO title="Home" />
+  <S.PageWrapper>
   <ul>
     {data.allContentfulAirplaneModel.edges.map((edge) =>
     <AirplaneModel key ={edge.node.slug} node={edge.node} />
     )}
   </ul>
-  </Layout>
+  </S.PageWrapper>
+ </>
 )
 export default IndexPage
 
