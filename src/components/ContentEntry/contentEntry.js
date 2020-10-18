@@ -6,7 +6,7 @@ import Link from 'gatsby-link'
 const ContentEntry = ({title, description, image, fullText, slug }) => (
   <S.Wrapper>
    <S.EntryTitle>
-   <Link to={slug}>{title}</Link>
+   <Link to={`/airplaneModels/${slug}`}>{title}</Link>
    </S.EntryTitle>
    <S.ImageContainer>
      <img src={image} alt={title} />

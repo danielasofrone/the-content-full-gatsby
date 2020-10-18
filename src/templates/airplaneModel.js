@@ -1,17 +1,20 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 import ContentEntry from '../components/ContentEntry/contentEntry'
+import SEO from "../components/seo"
+import Layout from "../components/Layout/layout"
 
 const AirplaneModel = ( {data}) =>  {
   const post = data.contentfulAirplaneModel
   return (
-    <div>
+    <Layout title={'Airplane Model'}>
+      <SEO title="Plane Model" />
        <ContentEntry
-    title={post.title}
-    image={post.image.resize.src}
-    fullText={post.fullText.childMarkdownRemark.html}
+          title={post.title}
+          image={post.image.resize.src}
+          fullText={post.fullText.childMarkdownRemark.html}
     />
-    </div>
+    </Layout>
   )
 }
 

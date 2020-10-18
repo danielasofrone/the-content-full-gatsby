@@ -3,19 +3,14 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   border: 1px solid rgba(244, 243, 242, 0.75);
   margin-top: 70px;
-  padding: 30px 20px 20px 20px;
-  @media (min-width: 576px) {
-    padding: 70px;
-  }
-  @media (min-width: 768px) {
-    padding: 70px 200px;
-  }
+  padding: 50px;
 `;
 
 export const EntryTitle = styled.div`
   font-family: "Questrial", sans-serif;
   font-size: 1.125rem;
   text-align: center;
+  font-weight: 600;
   margin-bottom: 30px;
   cursor: pointer;
   a {
