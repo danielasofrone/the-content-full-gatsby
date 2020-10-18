@@ -23,6 +23,7 @@ const Header = ({ siteTitle }) => (
           style={{
             color: `white`,
             textDecoration: `none`,
+            fontFamily: "Questrial",
           }}
         >
           {siteTitle}
