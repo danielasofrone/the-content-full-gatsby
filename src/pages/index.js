@@ -1,26 +1,8 @@
 import React from "react"
-import ContentEntry from '../components/ContentEntry/contentEntry'
 import SEO from "../components/seo"
 import Layout from "../components/Layout/layout"
 import * as S from '../components/ContentEntry/contentEntry.styled'
-
-const AirplaneModel = ({node}) => {
-
-  if (node.length === 0) {
-    return (
-        <p>No blog posts found.</p>
-    )
-  }
-  return (
-    <ContentEntry
-    title={node.title}
-    image={node.image.resize.src}
-    description={node.description}
-    slug={node.slug}
-    isHomePage
-    />
-  )
-}
+import AirplaneModel from '../components/AirplaneModel/AirplaneModel'
 
 const IndexPage = ({data}) => (
  <>

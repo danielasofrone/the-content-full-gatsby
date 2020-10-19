@@ -19,6 +19,7 @@ module.exports = {
         host: 'preview.contentful.com'
       }
     },
+    `gatsby-plugin-styled-components`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
