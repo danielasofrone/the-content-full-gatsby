@@ -1,7 +1,13 @@
 import styled from "styled-components";
 
 export const PageWrapper = styled.div`
-  margin: 0 200px;
+  margin: 0;
+  @media (min-width: 758px) {
+    margin: 0 50px;
+  }
+  @media (min-width: 992px) {
+    margin: 0 150px;
+  }
 `;
 
 export const Wrapper = styled.div`
